@@ -793,7 +793,7 @@ class AppWidgets {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Lottie.asset(
-                  asset.paymentJson,
+                  "",
                   // Replace with your Lottie animation file path
                   width: 200.w,
                   height: 200.w,
@@ -825,7 +825,7 @@ class AppWidgets {
   noDataFoundMsg() {
     return Center(
       child: Lottie.asset(
-        asset.noDataFoundLottie,
+        "",
         width: Get.width * .8,
       ),
     );
