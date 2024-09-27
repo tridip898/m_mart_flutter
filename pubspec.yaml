@@ -45,6 +45,8 @@ dependencies:
   firebase_messaging: ^15.0.3
   firebase_analytics: ^11.2.0
   flutter_local_notifications: ^17.2.1+2
+  soft_builder:
+    git: https://github.com/rezasoftbd/soft_builder.git
 
 dev_dependencies:
   flutter_test:

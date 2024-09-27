@@ -70,6 +70,7 @@ void main() async {
           getPages: AppPages.routes,
           debugShowCheckedModeBanner: false,
           builder: EasyLoading.init(),
+          defaultTransition: transition,
           themeMode: ThemeMode.dark,
           theme: ThemeData(
             useMaterial3: false,

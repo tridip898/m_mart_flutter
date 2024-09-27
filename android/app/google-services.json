@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "655848522210",
+    "project_id": "m-mart-9a18c",
+    "storage_bucket": "m-mart-9a18c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655848522210:android:1e8c201ddd5c6a0906b9bb",
+        "android_client_info": {
+          "package_name": "com.subrata.mmart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6DGzhmcJBOHJHtmABWVt8QvvxqDtp8s0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
