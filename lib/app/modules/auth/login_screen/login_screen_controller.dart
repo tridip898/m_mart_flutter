@@ -1,24 +1,22 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class LoginScreenController extends GetxController {
-  //TODO: Implement LoginScreenController
+  final formKey = GlobalKey<FormState>();
+  final emailController = TextEditingController(),
+      passwordController = TextEditingController();
 
-  final count = 0.obs;
+  final emailFocus = FocusNode(), passwordFocus = FocusNode();
+  final needToShowPassword = false.obs;
 
   @override
   void onInit() {
     super.onInit();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  handleShowPassword() {
+    needToShowPassword.value = !needToShowPassword.value;
   }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
+  loginClick() {}
 }

@@ -1,24 +1,18 @@
 import 'package:get/get.dart';
 
-class SplashScreenController extends GetxController {
-  //TODO: Implement SplashScreenController
+import '../../routes/app_pages.dart';
 
-  final count = 0.obs;
+class SplashScreenController extends GetxController {
+  var appName = "M-Mart";
 
   @override
   void onInit() {
+    Future.delayed(
+      const Duration(milliseconds: 2500),
+      () {
+        Get.offAllNamed(Routes.LOGIN_SCREEN);
+      },
+    );
     super.onInit();
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:soft_builder/soft_builder.dart';
 
 import 'app/core/binding/initial_binding.dart';
 import 'app/core/constants/app_colors.dart';
@@ -33,6 +34,19 @@ void main() async {
       statusBarIconBrightness: Brightness.dark,
       statusBarBrightness: Brightness.light,
     ),
+  );
+
+  await SoftBuilder().init(
+    primaryColor: AppColor.primaryColor,
+    baseURL: "",
+    doNeedScreenUtil: true,
+    isErrorMessageBangla: false,
+    font: GoogleFonts.titilliumWeb,
+    editTextBorderColor: AppColor.borderGrayColor,
+    dropdownBorderColor: AppColor.borderGrayColor,
+    buttonRadius: 50,
+    buttonColor: AppColor.primaryColor,
+    buttonElevation: 0.0,
   );
 
   bool showOnline = false;

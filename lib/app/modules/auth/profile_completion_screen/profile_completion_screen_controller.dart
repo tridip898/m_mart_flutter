@@ -1,24 +1,27 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:soft_builder/model/drop_down_model.dart';
 
 class ProfileCompletionScreenController extends GetxController {
-  //TODO: Implement ProfileCompletionScreenController
+  final nameController = TextEditingController(),
+      phoneController = TextEditingController();
+  final nameFocus = FocusNode(), phoneFocus = FocusNode();
+  final genderList = <DropDownModel>[
+    DropDownModel(id: "male", title: "Male"),
+    DropDownModel(id: "female", title: "Female"),
+    DropDownModel(id: "Others", title: "Others"),
+  ].obs;
 
-  final count = 0.obs;
+  final selectedGender = DropDownModel().obs;
 
   @override
   void onInit() {
     super.onInit();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  handleSelectedGender(value) {
+    selectedGender.value = value;
   }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
+  void completeProfileClick() {}
 }

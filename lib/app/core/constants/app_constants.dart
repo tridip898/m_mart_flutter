@@ -15,12 +15,12 @@ var appColors = AppColor();
 var apiClient = ApiClient();
 
 var removingUnwantedData = RegExp(r'\[\d+\]$');
-const Transition transition = Transition.rightToLeft;
+const Transition transition = Transition.fadeIn;
 const mainPadding = 20.0;
 double mainPaddingW = 20.0.w;
 double mainPaddingH = 20.0.h;
 double borderRadius = 10.0;
-const transitionDuration = 300;
+const transitionDuration = 500;
 
 enum Environment { prod, dev }
 

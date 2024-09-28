@@ -1,24 +1,32 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:m_mart_flutter/app/routes/app_pages.dart';
 
 class SignupScreenController extends GetxController {
-  //TODO: Implement SignupScreenController
+  final formKey = GlobalKey<FormState>();
+  final firstNameController = TextEditingController(),
+      lastNameController = TextEditingController(),
+      emailController = TextEditingController(),
+      passwordController = TextEditingController();
 
-  final count = 0.obs;
+  final emailFocus = FocusNode(),
+      firstNameFocus = FocusNode(),
+      lastNameFocus = FocusNode(),
+      passwordFocus = FocusNode();
+  final needToShowPassword = false.obs, isChecked = false.obs;
 
   @override
   void onInit() {
     super.onInit();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  handleShowPassword() {
+    needToShowPassword.value = !needToShowPassword.value;
   }
 
-  @override
-  void onClose() {
-    super.onClose();
+  signupClick() {
+    if (formKey.currentState?.validate() ?? false) {
+      Get.toNamed(Routes.PROFILE_COMPLETION_SCREEN);
+    }
   }
-
-  void increment() => count.value++;
 }
