@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppColor {
-  static const int _primaryColorValue = 0xFF228BC8;
+  static const int _primaryColorValue = 0xFF654431;
   static const MaterialColor colorPrimarySwatch = MaterialColor(
     _primaryColorValue,
     <int, Color>{
@@ -21,7 +21,7 @@ class AppColor {
   static const backgroundColor = Color(0xffF6F5F2);
   static const bannerColor = Color(0xFFFFE5E5);
   static const primaryBlueColor = Color(0xFF4F5389);
-  static const primaryColor = Color(0xFF00224D);
+  static const primaryColor = Color(0xFF654431);
   static const outletPrimaryColor = Color(0xFF496989);
   static const plantPrimaryColor = Color(0xFF009265);
   static const profileStepBackgroundColor = Color(0xffFCFDFC);
