@@ -1,5 +1,5 @@
 name: m_mart_flutter
-description: "A new Flutter project."
+description: "M Mart"
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -46,8 +46,8 @@ dependencies:
   firebase_analytics: ^11.2.0
   flutter_local_notifications: ^17.2.1+2
   flutter_animate: ^4.5.0
-  soft_builder:
-    git: https://github.com/rezasoftbd/soft_builder.git
+  app_builder:
+    git: https://github.com/SubrataChk/app_builder.git
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +55,8 @@ dev_dependencies:
   connectivity_plus: ^6.0.3
   dropdown_button2: ^2.3.9
   see_more: ^0.0.5
+
+
 
 
   flutter_lints: ^5.0.0

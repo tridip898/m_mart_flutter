@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:m_mart_flutter/app/core/constants/app_colors.dart';
 import 'package:m_mart_flutter/app/core/constants/asset_constants.dart';
-import 'package:soft_builder/constraints/my_constraints.dart';
-import 'package:soft_builder/constraints/my_text_style.dart';
+import 'package:app_builder/constraints/my_constraints.dart';
+import 'package:app_builder/constraints/my_text_style.dart';
 
 import 'home_controller.dart';
 

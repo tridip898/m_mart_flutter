@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:soft_builder/constraints/my_text_style.dart';
+import 'package:app_builder/constraints/my_text_style.dart';
 
 import 'splash_screen_controller.dart';
 

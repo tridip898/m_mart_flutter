@@ -16,7 +16,7 @@ var apiClient = ApiClient();
 
 var removingUnwantedData = RegExp(r'\[\d+\]$');
 const Transition transition = Transition.fadeIn;
-const mainPadding = 20.0;
+
 double mainPaddingW = 20.0.w;
 double mainPaddingH = 20.0.h;
 double borderRadius = 10.0;
@@ -47,13 +47,13 @@ const smallPadding = EdgeInsets.all(8);
 final defaultBorder = BorderRadius.circular(12);
 
 EdgeInsetsGeometry mainPaddingAll =
-const EdgeInsets.symmetric(horizontal: mainPadding, vertical: mainPadding);
+ EdgeInsets.symmetric(horizontal: mainPaddingH, vertical: mainPaddingH);
 
 EdgeInsetsGeometry mainPaddingAllWH =
 EdgeInsets.symmetric(horizontal: mainPaddingW, vertical: mainPaddingH);
 
 EdgeInsetsGeometry mainPaddingWidthOnly =
-const EdgeInsets.symmetric(horizontal: mainPadding);
+ EdgeInsets.symmetric(horizontal: mainPaddingH);
 
 EdgeInsetsGeometry mainPaddingWidthOnlyW =
 EdgeInsets.symmetric(horizontal: mainPaddingW);

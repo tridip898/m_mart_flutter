@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
-import 'package:soft_builder/soft_builder.dart';
+import 'package:app_builder/app_builder.dart';
 
 import 'app/core/binding/initial_binding.dart';
 import 'app/core/constants/app_colors.dart';
@@ -36,7 +36,7 @@ void main() async {
     ),
   );
 
-  await SoftBuilder().init(
+  await AppBuilder().init(
     primaryColor: AppColor.primaryColor,
     baseURL: "",
     doNeedScreenUtil: true,

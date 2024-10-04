@@ -20,6 +20,8 @@ import '../modules/main_screen/favorite_screen/favorite_screen_binding.dart';
 import '../modules/main_screen/favorite_screen/favorite_screen_view.dart';
 import '../modules/main_screen/home/home_binding.dart';
 import '../modules/main_screen/home/home_view.dart';
+import '../modules/my_profile/my_profile_binding.dart';
+import '../modules/my_profile/my_profile_view.dart';
 import '../modules/splash_screen/splash_screen_binding.dart';
 import '../modules/splash_screen/splash_screen_view.dart';
 
@@ -28,7 +30,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SPLASH_SCREEN;
+  static const INITIAL = Routes.MAIN_NAV;
 
   static final routes = [
     GetPage(
@@ -85,6 +87,11 @@ class AppPages {
       name: _Paths.ACCOUNT_SCREEN,
       page: () => const AccountScreenView(),
       binding: AccountScreenBinding(),
+    ),
+    GetPage(
+      name: _Paths.MY_PROFILE,
+      page: () => const MyProfileView(),
+      binding: MyProfileBinding(),
     ),
   ];
 }

@@ -15,6 +15,7 @@ abstract class Routes {
   static const CHAT_SCREEN = _Paths.CHAT_SCREEN;
   static const FAVORITE_SCREEN = _Paths.FAVORITE_SCREEN;
   static const ACCOUNT_SCREEN = _Paths.ACCOUNT_SCREEN;
+  static const MY_PROFILE = _Paths.MY_PROFILE;
 }
 
 abstract class _Paths {
@@ -31,4 +32,5 @@ abstract class _Paths {
   static const CHAT_SCREEN = '/chat-screen';
   static const FAVORITE_SCREEN = '/favorite-screen';
   static const ACCOUNT_SCREEN = '/account-screen';
+  static const MY_PROFILE = '/my-profile';
 }

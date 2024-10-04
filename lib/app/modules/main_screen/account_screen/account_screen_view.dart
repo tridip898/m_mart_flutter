@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:m_mart_flutter/app/core/constants/app_colors.dart';
 import 'package:m_mart_flutter/app/core/constants/asset_constants.dart';
-import 'package:soft_builder/constraints/my_colors.dart';
-import 'package:soft_builder/constraints/my_constraints.dart';
-import 'package:soft_builder/constraints/my_text_style.dart';
+import 'package:app_builder/constraints/my_colors.dart';
+import 'package:app_builder/constraints/my_constraints.dart';
+import 'package:app_builder/constraints/my_text_style.dart';
+import 'package:m_mart_flutter/app/routes/app_pages.dart';
 
+import '../../../core/constants/tr_constant.dart';
+import '../../../core/widgets/app_circle_network_image_viewer.dart';
 import 'account_screen_controller.dart';
 
 class AccountScreenView extends GetView<AccountScreenController> {
@@ -31,44 +35,66 @@ class AccountScreenView extends GetView<AccountScreenController> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 gapH12,
+                Center(
+                  child: CircleAvatar(
+                    backgroundColor: AppColor.plantPrimaryColor,
+                    radius: 70.w,
+                    child: AppCircleNetworkImageViewer(
+                      "" ?? "",
+                      130.w,
+
+                      assetImage: noDataFoundImage,
+                      // assetImageColor: AppColor.primaryColor.withOpacity(0.7),
+                      assetWidth: 80,
+                    ),
+                  ),
+                ),
+                gapH12,
                 Text(
                   "Ester Howard",
                   style: text18Style(isWeight600: true),
                 ),
                 gapH16,
                 accountOption(
+                  "Your Profile",
+                  personImage,
+                  () {
+                    Get.toNamed(Routes.MY_PROFILE);
+                  },
+                ),
+                accountOption(
                   "Payment Methods",
-                  accountIcon,
+                  cardImage,
                   () {},
                 ),
                 accountOption(
                   "My Orders",
-                  accountIcon,
+                  orderImage,
                   () {},
                 ),
                 accountOption(
                   "Settings",
-                  accountIcon,
+                  settingImage,
                   () {},
                 ),
                 accountOption(
                   "Help Center",
-                  accountIcon,
+                  infoImage,
                   () {},
                 ),
                 accountOption(
                   "Privacy Policy",
-                  accountIcon,
+                  privacyImage,
                   () {},
                 ),
                 accountOption(
                   "Invite Friends",
-                  accountIcon,
+                  addPersonImage,
                   () {},
                 ),
                 accountOption(
                   "Log Out",
-                  accountIcon,
+                  logOutImage,
                   () {},
                 ),
               ],
@@ -86,7 +112,7 @@ class AccountScreenView extends GetView<AccountScreenController> {
           onTap: onTap,
           borderRadius: BorderRadius.circular(4),
           child: Padding(
-            padding: mainPadding(4, 16),
+            padding: mainPadding(10, 16),
             child: Row(
               children: [
                 Expanded(

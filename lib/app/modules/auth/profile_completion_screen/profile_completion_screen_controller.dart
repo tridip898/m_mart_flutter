@@ -1,6 +1,6 @@
+import 'package:app_builder/model/drop_down_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:soft_builder/model/drop_down_model.dart';
 
 class ProfileCompletionScreenController extends GetxController {
   final nameController = TextEditingController(),

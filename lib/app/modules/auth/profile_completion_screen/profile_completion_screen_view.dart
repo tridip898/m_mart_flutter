@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:soft_builder/constraints/my_constraints.dart';
-import 'package:soft_builder/constraints/my_text_style.dart';
-import 'package:soft_builder/widget/my_button.dart';
-import 'package:soft_builder/widget/my_drop_down.dart';
-import 'package:soft_builder/widget/my_edit_text.dart';
+import 'package:app_builder/constraints/my_constraints.dart';
+import 'package:app_builder/constraints/my_text_style.dart';
+import 'package:app_builder/widget/my_button.dart';
+import 'package:app_builder/widget/my_drop_down.dart';
+import 'package:app_builder/widget/my_edit_text.dart';
 
 import '../../../core/constants/app_colors.dart';
 import 'profile_completion_screen_controller.dart';
