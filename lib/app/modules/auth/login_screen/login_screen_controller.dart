@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:m_mart_flutter/app/routes/app_pages.dart';
 
 class LoginScreenController extends GetxController {
   final formKey = GlobalKey<FormState>();
@@ -18,5 +19,9 @@ class LoginScreenController extends GetxController {
     needToShowPassword.value = !needToShowPassword.value;
   }
 
-  loginClick() {}
+  loginClick() {
+    if (formKey.currentState?.validate() ?? false) {
+      Get.offAllNamed(Routes.MAIN_NAV);
+    }
+  }
 }
