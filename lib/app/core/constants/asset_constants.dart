@@ -9,3 +9,4 @@ const cartIcon = "${pngPath}shopping-cart.png";
 const favIcon = "${pngPath}heart.png";
 const chatIcon = "${pngPath}chat.png";
 const accountIcon = "${pngPath}account.png";
+const categoryImageIcon = "${pngPath}summer.png";
