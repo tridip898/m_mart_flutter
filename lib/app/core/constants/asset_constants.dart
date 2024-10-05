@@ -1,5 +1,6 @@
 // Asset Path
 const pngPath = "assets/png/";
+const jpgPath = "assets/jpg/";
 const lottiePath = "assets/lottie/";
 
 //png
@@ -21,3 +22,9 @@ const addPersonImage = "${pngPath}add_person.png";
 const noDataFoundImage = "${pngPath}noDataFoundImage.png";
 const String emailImage = "$pngPath/email.png";
 const String phoneImage = "$pngPath/phone.png";
+const String filterImage = "${pngPath}filter.png";
+const String notificationImage = "${pngPath}notification.png";
+
+
+//jpg
+const String blackJacketImage = "${pngPath}black_jacket.jpg";

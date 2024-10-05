@@ -3,9 +3,9 @@ import 'package:app_builder/widget/my_button.dart';
 import 'package:app_builder/widget/my_edit_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:m_mart_flutter/app/core/constants/app_colors.dart';
-import 'package:m_mart_flutter/app/core/constants/my_text_style.dart';
-import 'package:m_mart_flutter/app/core/widgets/app_rich_text.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/my_text_style.dart';
+import '../../../core/widgets/app_rich_text.dart';
 
 import '../../../routes/app_pages.dart';
 import 'login_screen_controller.dart';
