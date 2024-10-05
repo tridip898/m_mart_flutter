@@ -1,6 +1,7 @@
 import 'package:app_builder/model/drop_down_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:m_mart_flutter/app/routes/app_pages.dart';
 
 class ProfileCompletionScreenController extends GetxController {
   final nameController = TextEditingController(),
@@ -23,5 +24,7 @@ class ProfileCompletionScreenController extends GetxController {
     selectedGender.value = value;
   }
 
-  void completeProfileClick() {}
+  void completeProfileClick() {
+    Get.toNamed(Routes.MAIN_NAV);
+  }
 }

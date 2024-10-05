@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../core/constants/app_colors.dart';
+import '../../../core/widgets/app_default/app_app_bar.dart';
 import 'favorite_screen_controller.dart';
 
 class FavoriteScreenView extends GetView<FavoriteScreenController> {
@@ -9,14 +11,14 @@ class FavoriteScreenView extends GetView<FavoriteScreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('FavoriteScreenView'),
-        centerTitle: true,
+      appBar: AppAppBar(
+        title: "Favorite",
+        titleColor: AppColor.black,
       ),
-      body: const Center(
-        child: Text(
-          'FavoriteScreenView is working',
-          style: TextStyle(fontSize: 20),
+      backgroundColor: AppColor.white,
+      body: SafeArea(
+        child: Column(
+          children: [],
         ),
       ),
     );

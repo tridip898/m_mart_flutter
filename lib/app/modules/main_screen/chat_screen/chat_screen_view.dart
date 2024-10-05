@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../core/constants/app_colors.dart';
+import '../../../core/widgets/app_default/app_app_bar.dart';
 import 'chat_screen_controller.dart';
 
 class ChatScreenView extends GetView<ChatScreenController> {
@@ -9,14 +11,14 @@ class ChatScreenView extends GetView<ChatScreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ChatScreenView'),
-        centerTitle: true,
+      appBar: AppAppBar(
+        title: "Chat",
+        titleColor: AppColor.black,
       ),
-      body: const Center(
-        child: Text(
-          'ChatScreenView is working',
-          style: TextStyle(fontSize: 20),
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Column(
+          children: [],
         ),
       ),
     );

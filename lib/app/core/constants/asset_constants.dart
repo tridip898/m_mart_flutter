@@ -27,4 +27,4 @@ const String notificationImage = "${pngPath}notification.png";
 
 
 //jpg
-const String blackJacketImage = "${pngPath}black_jacket.jpg";
+const String blackJacketImage = "${jpgPath}black_jacket.jpg";

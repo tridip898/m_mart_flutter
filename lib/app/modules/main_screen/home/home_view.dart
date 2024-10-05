@@ -18,7 +18,7 @@ class HomeView extends GetView<HomeController> {
       body: SafeArea(
         child: Column(
           children: [
-            gapH3,
+            gapH12,
             Padding(
               padding: mainPadding(16, 0),
               child: Row(
@@ -49,7 +49,7 @@ class HomeView extends GetView<HomeController> {
                       ),
                       padding: mainPadding(8, 8),
                       child: Image.asset(
-                        notificationImage,
+                        filterImage,
                         height: 20.w,
                         width: 20.w,
                         color: AppColor.primaryColor,
@@ -67,7 +67,7 @@ class HomeView extends GetView<HomeController> {
                       ),
                       padding: mainPadding(8, 8),
                       child: Image.asset(
-                        filterImage,
+                        notificationImage,
                         height: 20.w,
                         width: 20.w,
                         color: AppColor.primaryColor,
@@ -116,17 +116,20 @@ class HomeView extends GetView<HomeController> {
                             ),
                             child: Column(
                               children: [
-                                Ink(
-                                  decoration: BoxDecoration(
-                                      color:
-                                      AppColor.primaryColor.withOpacity(.05),
-                                      shape: BoxShape.circle),
-                                  padding: mainPadding(12, 12),
-                                  child: Image(
-                                    image: AssetImage(categoryImageIcon),
-                                    height: 32.h,
-                                    width: 32.w,
-                                    color: AppColor.primaryColor,
+                                Material(
+                                  child: Ink(
+                                    decoration: BoxDecoration(
+                                      color: AppColor.primaryColor
+                                          .withOpacity(.05),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    padding: mainPadding(12, 12),
+                                    child: Image(
+                                      image: AssetImage(categoryImageIcon),
+                                      height: 32.h,
+                                      width: 32.w,
+                                      color: AppColor.primaryColor,
+                                    ),
                                   ),
                                 ),
                                 gapH3,
@@ -154,41 +157,44 @@ class HomeView extends GetView<HomeController> {
                             "Flash Sale",
                             style: text18Style(),
                           ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              "View all",
-                              style: text14Style(),
-                            ),
-                          )
+                          Obx(() {
+                            return Text(
+                              "${controller.hours.value} : ${controller.minutes.value} : ${controller.seconds.value}",
+                              style: text18Style(isWeight600: true),
+                            );
+                          })
                         ],
                       ),
                     ),
+                    gapH16,
+                    SizedBox(
+                      height: 36,
+                      child: ListView.separated(
+                        scrollDirection: Axis.horizontal,
+                        physics: BouncingScrollPhysics(),
+                        itemBuilder: (_, index) {
+                          return tabBarDesign(index);
+                        },
+                        separatorBuilder: (_, index) {
+                          return gapW12;
+                        },
+                        itemCount: 10,
+                      ),
+                    ),
+                    gapH16,
                     Padding(
                       padding: mainPadding(16, 0),
                       child: GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          crossAxisSpacing: 12.w,
-                          mainAxisSpacing: 12.w,
-                        ),
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 12.w,
+                            mainAxisSpacing: 12.w,
+                            childAspectRatio: 0.965.h),
                         itemCount: 10,
                         physics: NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemBuilder: (_, index) {
-                          return Container(
-                            color: AppColor.red,
-                            child: Column(
-                              children: [
-                                Image.asset(
-                                  blackJacketImage,
-                                  height: 100,
-                                ),
-                                gapH3,
-                                Text("Black Jacket"),
-                              ],
-                            ),
-                          );
+                          return productDesign();
                         },
                       ),
                     ),
@@ -200,5 +206,98 @@ class HomeView extends GetView<HomeController> {
         ),
       ),
     );
+  }
+
+  Widget productDesign() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Stack(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                blackJacketImage,
+                height: 125.h,
+                width: Get.width,
+                fit: BoxFit.fill,
+              ),
+            ),
+            Positioned(
+              right: 4.w,
+              top: 4.h,
+              child: Material(
+                color: AppColor.transparent,
+                child: InkWell(
+                  onTap: () {},
+                  borderRadius: BorderRadius.circular(100),
+                  child: Ink(
+                    decoration: BoxDecoration(
+                        color: AppColor.black.withOpacity(.2),
+                        shape: BoxShape.circle),
+                    padding: mainPadding(6, 6),
+                    child: Icon(
+                      Icons.favorite_border_rounded,
+                      color: Colors.white.withOpacity(.5),
+                    ),
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
+        gapH3,
+        Text(
+          "Black Jacket",
+          style: text14Style(isWeight600: true),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        ),
+        Text(
+          "\$${120}",
+          style: text14Style(isWeight600: true),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        )
+      ],
+    );
+  }
+
+  Widget tabBarDesign(int index) {
+    return Obx(() {
+      var isSelected = controller.selectedIndex.value == index;
+      return Padding(
+        padding: EdgeInsets.only(
+          left: index == 0 ? 16.w : 0,
+          right: index == 9 ? 16.w : 0,
+        ),
+        child: Material(
+          child: InkWell(
+            onTap: () {
+              controller.selectedIndex.value = index;
+            },
+            borderRadius: BorderRadius.circular(30),
+            child: Ink(
+              decoration: BoxDecoration(
+                color:
+                    isSelected ? AppColor.primaryColor : AppColor.transparent,
+                border: Border.all(
+                  color: isSelected ? AppColor.primaryColor : AppColor.grey,
+                  width: 1,
+                ),
+                borderRadius: BorderRadius.circular(30),
+              ),
+              padding: mainPadding(30, 0),
+              child: Center(
+                child: Text(
+                  "All",
+                  style: text16Style(isWhiteColor: isSelected),
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+    });
   }
 }

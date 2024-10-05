@@ -1,10 +1,10 @@
 import 'dart:io';
 
+import 'package:app_builder/constraints/my_constraints.dart';
+import 'package:app_builder/constraints/my_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:app_builder/constraints/my_constraints.dart';
-import 'package:app_builder/constraints/my_text_style.dart';
 
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/asset_constants.dart';
@@ -118,7 +118,7 @@ class MainNavView extends GetView<MainNavController> {
                     width: 24.w,
                     color: isSelected
                         ? AppColor.primaryColor
-                        : AppColor.black.withOpacity(.6),
+                        : AppColor.black.withOpacity(.5),
                   ),
                 ),
               ),
@@ -127,10 +127,10 @@ class MainNavView extends GetView<MainNavController> {
             Text(
               title,
               style: text14Style(
-                fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                isWeight600: true,
                 color: isSelected
                     ? AppColor.primaryColor
-                    : AppColor.black.withOpacity(.6),
+                    : AppColor.black.withOpacity(.5),
               ),
             )
           ],

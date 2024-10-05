@@ -1,14 +1,14 @@
+import 'package:app_builder/constraints/my_colors.dart';
+import 'package:app_builder/constraints/my_constraints.dart';
+import 'package:app_builder/constraints/my_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:m_mart_flutter/app/core/constants/app_colors.dart';
 import 'package:m_mart_flutter/app/core/constants/asset_constants.dart';
-import 'package:app_builder/constraints/my_colors.dart';
-import 'package:app_builder/constraints/my_constraints.dart';
-import 'package:app_builder/constraints/my_text_style.dart';
+import 'package:m_mart_flutter/app/core/widgets/app_default/app_app_bar.dart';
 import 'package:m_mart_flutter/app/routes/app_pages.dart';
 
-import '../../../core/constants/tr_constant.dart';
 import '../../../core/widgets/app_circle_network_image_viewer.dart';
 import 'account_screen_controller.dart';
 
@@ -18,12 +18,9 @@ class AccountScreenView extends GetView<AccountScreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'My Account',
-          style: text18Style(),
-        ),
-        elevation: 0,
+      appBar: AppAppBar(
+        title: "My Account",
+        titleColor: AppColor.black,
       ),
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -40,11 +37,9 @@ class AccountScreenView extends GetView<AccountScreenController> {
                     backgroundColor: AppColor.plantPrimaryColor,
                     radius: 70.w,
                     child: AppCircleNetworkImageViewer(
-                      "" ?? "",
+                      "",
                       130.w,
-
                       assetImage: noDataFoundImage,
-                      // assetImageColor: AppColor.primaryColor.withOpacity(0.7),
                       assetWidth: 80,
                     ),
                   ),
@@ -120,8 +115,8 @@ class AccountScreenView extends GetView<AccountScreenController> {
                     children: [
                       Image.asset(
                         icon,
-                        height: 20.h,
-                        width: 20.w,
+                        height: 26.h,
+                        width: 26.w,
                       ),
                       gapW12,
                       Flexible(

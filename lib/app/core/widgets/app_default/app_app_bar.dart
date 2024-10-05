@@ -65,7 +65,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
           ? Container()
           : Text(
               title,
-              style: text16Style(
+              style: text18Style(
                 fontWeight: titleFontWeight,
                 fontSize: titleFontSize,
                 color: titleColor,
