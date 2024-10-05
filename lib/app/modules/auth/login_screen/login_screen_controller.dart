@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:m_mart_flutter/app/routes/app_pages.dart';
 
 class LoginScreenController extends GetxController {
-  final formKey = GlobalKey<FormState>();
+  final signinFormKey = GlobalKey<FormState>();
   final emailController = TextEditingController(),
       passwordController = TextEditingController();
 
@@ -20,7 +20,7 @@ class LoginScreenController extends GetxController {
   }
 
   loginClick() {
-    if (formKey.currentState?.validate() ?? false) {
+    if (signinFormKey.currentState?.validate() ?? false) {
       Get.offAllNamed(Routes.MAIN_NAV);
     }
   }

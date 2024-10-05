@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:m_mart_flutter/app/routes/app_pages.dart';
 
 class SignupScreenController extends GetxController {
-  final formKey = GlobalKey<FormState>();
+  final signupFormKey = GlobalKey<FormState>();
   final firstNameController = TextEditingController(),
       lastNameController = TextEditingController(),
       emailController = TextEditingController(),
@@ -25,7 +25,7 @@ class SignupScreenController extends GetxController {
   }
 
   signupClick() {
-    if (formKey.currentState?.validate() ?? false) {
+    if (signupFormKey.currentState?.validate() ?? false) {
       Get.toNamed(Routes.PROFILE_COMPLETION_SCREEN);
     }
   }

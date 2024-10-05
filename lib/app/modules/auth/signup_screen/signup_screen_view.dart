@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:app_builder/constraints/my_constraints.dart';
 import 'package:app_builder/constraints/my_text_style.dart';
 import 'package:app_builder/widget/my_button.dart';
 import 'package:app_builder/widget/my_edit_text.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../core/constants/app_colors.dart';
 import '../../../core/widgets/app_rich_text.dart';
@@ -40,7 +40,7 @@ class SignupScreenView extends GetView<SignupScreenController> {
                   ),
                   gapH24,
                   Form(
-                    key: controller.formKey,
+                    key: controller.signupFormKey,
                     child: Obx(() {
                       return Column(
                         children: [

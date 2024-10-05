@@ -25,6 +25,6 @@ class ProfileCompletionScreenController extends GetxController {
   }
 
   void completeProfileClick() {
-    Get.toNamed(Routes.MAIN_NAV);
+    Get.offAllNamed(Routes.MAIN_NAV);
   }
 }
